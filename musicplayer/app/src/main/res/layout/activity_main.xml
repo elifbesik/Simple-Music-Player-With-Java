@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="">
+
+    <!-- TODO:resim-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/boy" />
+        </RelativeLayout>
+<LinearLayout
+    android:layout_centerInParent="true"
+    android:layout_above="@+id/ilerleme"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ferdi tayfur   "
+        android:textColor="#ffff" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hatıran yeter "
+        android:textColor="#ffff"/>
+</LinearLayout>
+
+    <!-- TODO:ilerleme durumu -->
+    <RelativeLayout
+        android:id="@+id/ilerleme"
+        android:layout_above="@+id/basla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <SeekBar
+            android:id="@+id/ilerlet"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="5dp"
+            android:progressTint="#ea9c34"
+            android:thumbTint="#ea9c34" />
+        <TextView
+            android:id="@+id/ilk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="0:11"
+            android:textColor="	#ffffff"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/son"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="370dp"
+            android:text="-1:49"
+            android:textColor="	#ffffff"
+            android:textSize="15dp" />
+
+        </RelativeLayout>
+
+    <!-- TODO:play-pause tuşu -->
+    <RelativeLayout
+        android:layout_above="@+id/vbar"
+       android:id="@+id/basla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toLeftOf="@+id/play"
+            android:background="@drawable/back"
+            android:onClick="playBtnClickBack" />
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/play"
+            android:onClick="playBtnClick"
+            android:layout_centerInParent="true"/>
+
+
+        <Button
+            android:id="@+id/next"
+            android:layout_toRightOf="@+id/play"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/next"
+            android:onClick="playBtnClickNext" />
+
+    </RelativeLayout>
+
+    <!-- TODO:ses durumu-->
+    <LinearLayout
+        android:id="@+id/vbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/vdown"/>
+        <SeekBar
+            android:id="@+id/volume"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:progress="50"
+            android:max="100"
+            android:progressTint="#ea9c34"
+            android:thumbTint="#ea9c34"/>
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/vup"/>
+    </LinearLayout>
+</RelativeLayout>
